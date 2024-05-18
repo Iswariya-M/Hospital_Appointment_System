@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    line-height: 1.4;
+    color: var(--dark);
+    height: 90px;
+}
+
+header{
+    min-height: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    background-image: url('../../../assets/home.jpg'); 
+    background-size: cover;  
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    
+    margin: 0 auto;
+    padding: 0 1.2rem;
+    
+}
+  
+.navbar{
+    background:rgb(175, 225, 225);
+    padding: 1.2rem;
+}
+.navbar-brand{
+    color: #353434;
+    font-size: 2rem;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--Playfair);
+    letter-spacing: 1px;
+}
+.navbar-nav{
+    padding: 0.8rem 0 0.2rem 0;
+    text-align: center;
+    display: flex;
+    
+}
+.navbar-nav a{
+    text-transform: uppercase;
+    font-family: var(--Roboto);
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #353434;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.4rem 0.1rem;
+    letter-spacing: 3px;
+    transition: opacity 0.5s ease;
+}
+.navbar-nav a:hover{
+    opacity: 0.7;
+}
+
+@media screen and (min-width: 540px){
+    .navbar-nav a{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+    
+}
+
+@media screen and (min-width: 768px){
+    .navbar .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+   
+}
+
+
+.emergency-wrapper {
+    position: relative;
+}
+  
+.emergency-link {
+    cursor: pointer;
+}
+  
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+.dropdown-menu.show {
+    display: block;
+}
+  
+.dropdown-item {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+  
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+  
+
+

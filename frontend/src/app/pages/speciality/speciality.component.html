@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+<div class="title">
+    <h1>Departments</h1>
+    <p>World-class infrastructure and cutting-edge facilities, we deliver unparalleled expert services tailored to the unique needs of our patients at an affordable cost along with holistic and empathetic care.</p>
+</div>
+<div class="specialities-container">
+    <div *ngFor="let speciality of specialities" class="speciality-box" (click)="onSelectSpeciality(speciality.id)">
+        <div class="box-content">
+            <div class="image-container">
+                <img [src]="speciality.BannerUrl" alt="{{ speciality.speciality }}" class="speciality-image">
+            </div>
+            <h3 class="speciality-title">{{ speciality.speciality }}</h3>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
+
+  

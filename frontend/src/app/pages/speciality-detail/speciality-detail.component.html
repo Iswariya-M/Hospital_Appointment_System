@@ -1,0 +1,17 @@
+<app-nav></app-nav>
+
+<div *ngIf="speciality" class="title">
+    <h1>{{ speciality.speciality }}</h1>
+
+    <img [src]="speciality.LogoUrl" alt="{{ speciality.speciality }}">
+</div>
+<div *ngIf="speciality" class="speciality-container">
+    <div class="image-container">
+        <img [src]="speciality.imageUrl" alt="{{ speciality.speciality }}">
+    </div>
+    <div class="description">
+        <p>{{ speciality.description }}</p>
+    </div>
+</div>
+
+<app-footer></app-footer>

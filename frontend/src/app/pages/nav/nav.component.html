@@ -1,0 +1,25 @@
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand">MediBook</a>
+        <div class="navbar-nav">            
+          <a routerLink="/home">HOME</a>
+          <a routerLink="/speciality">Our Specialities</a>
+          <a routerLink="/book">Appointment</a>
+          <div class="emergency-wrapper">
+            <a class="emergency-link" (click)="toggleDropdown()">Emergency</a>
+            <div class="dropdown-menu" [class.show]="dropdownOpen">
+              <div class="dropdown-item">Ambulance Available!Give a call for</div>
+              <div class="dropdown-item" *ngFor="let location of locations">
+                {{ location.name }} - {{ location.phone }}
+              </div>
+            </div>
+          </div>
+          <a routerLink="/about">About us</a>
+          <a routerLink="/login">Logout</a>
+        </div>
+      </div>
+    </nav> 
+  </header>
+</body>

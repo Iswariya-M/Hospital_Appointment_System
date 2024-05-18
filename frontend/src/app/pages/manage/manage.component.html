@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+<body>
+    <div class="dashboard-container">
+      <div class="sidebar">
+        <br>
+        <br>
+        <h2>Admin Dashboard</h2>
+        <ul>
+          <a routerLink="/admin"><li>Dashboard</li></a>
+          <br>
+          <a routerLink="/add"><li>Add Doctor</li></a>
+          <br>
+          <a routerLink="/manage"><li>Manage Doctors</li></a>
+          <br><a routerLink="/view"><li>View Appointments</li></a>
+        </ul>
+      </div>
+      <div class="main-content">
+        <h2>Manage Doctors</h2>
+        <div class="section" >
+          <table class="table">
+            <tr>
+              <th>Name</th>
+              <th>Speciality</th>
+              <th>Date of Birth</th>
+              <th>Age</th>
+              <th>Location</th>
+              <th>Phone</th>
+              <th>Action</th>
+            </tr>
+            <tr *ngFor="let doctor of doctors">
+              <td>{{ doctor.doctor_name}}</td>
+              <td>{{ doctor.speciality }}</td>
+              <td>{{ doctor.dob | date:'dd-MM-yyyy' }}</td>
+              <td>{{ doctor.age }}</td>
+              <td>{{ doctor.location }}</td>
+              <td>{{ doctor.phone_number }}</td>
+              <td><button (click)="deleteDoctor(doctor.id)">Delete</button></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+
+<app-footer></app-footer>

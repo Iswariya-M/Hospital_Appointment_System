@@ -1,0 +1,44 @@
+<app-nav></app-nav>
+<body>
+    <div class="dashboard-container">
+      <div class="sidebar">
+        <br>
+        <br>
+        <h2>Admin Dashboard</h2>
+        <ul>
+          <a routerLink="/admin"><li>Dashboard</li></a>
+          <br>
+          <a routerLink="/add"><li>Add Doctor</li></a>
+          <br>
+          <a routerLink="/manage"><li>Manage Doctors</li></a>
+          <br>
+          <a routerLink="/view"><li>View Appointments</li></a>
+        </ul>
+      </div>
+      <div class="main-content">
+        <h2>View Appointments</h2>
+        <div class="section" >
+          <table class="table">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Doctor</th>
+              <th>Phone</th>
+              <th>Date</th>
+              <th>Time Slot</th>
+            </tr>
+            <tr *ngFor="let appointment of appointments">
+              <td>{{ appointment.name }}</td>
+              <td>{{ appointment.email }}</td>
+              <td>{{ appointment.doctor }}</td>
+              <td>{{ appointment.phone }}</td>
+              <td>{{ appointment.date | date:'dd-MM-yyyy' }}</td>
+              <td>{{ appointment.time_slot}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+
+<app-footer></app-footer>

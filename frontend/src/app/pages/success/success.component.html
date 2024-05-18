@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+<div *ngIf="formData" class="success-container">
+  <div class="details-box">
+    <h2>Success!</h2>
+    <p>Name: {{ formData.name }}</p>
+    <p>Email: {{ formData.email }}</p>
+    <p>Phone: {{ formData.phone }}</p>
+    <p>Doctor: {{ formData.doctor.split(' - ')[0] }}</p>
+    <p>Speciality: {{ formData.doctor.split(' - ')[1] }}</p>
+    <p>Date: {{ formData.date | date }}</p>
+    <p>Time Slot: {{ formData.timeSlot }}</p>
+  </div>
+  <br>
+  <button (click)="goBack()" class="back-button">BACK</button>
+  
+</div>
+<app-footer></app-footer>
+
+<!-- <div class="success-container">
+    <h2>Appointment Success</h2>
+    <p>Name: {{ formData?.name }}</p>
+    <p>Email: {{ formData?.email }}</p>
+    <p>Doctor: {{ formData?.doctor }}</p>
+    <p>Phone: {{ formData?.phone }}</p>
+    <p>Date: {{ formData?.date | date }}</p>
+    <p>Time Slot: {{ formData?.timeSlot }}</p>
+  </div> -->
+  
